@@ -5,14 +5,6 @@ export default function SignIn() {
     const { data: session} = useSession()
 
     return session ? (
-            <form
-                action={async () => {
-                    "use server"
-                    await signIn("github")
-                }}
-            >
-                <button type="submit">Signin with GitHub</button>
-            </form>
             <div className="bg-amber-200 text-black max-w-3xl w-full space-y-8 p-6 rounded-xl border-2">
                 <div className="text-center space-y-2 flex flex-col items-center">
                     <h1 className=" text-3xl font-bold tracking-tight">
